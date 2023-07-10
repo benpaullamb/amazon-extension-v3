@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Search Tool v3",
+  "version": "3.0.0",
+  "description": "Amazon Search Tool v3",
+  "icons": {
+    "152": "icon152.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.amazon.co.uk/s*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Amazon Search Tool v3",
+    "default_popup": "./index.html"
+  },
+  "permissions": ["tabGroups"]
+}

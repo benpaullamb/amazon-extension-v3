@@ -1,0 +1,24 @@
+{
+  "name": "amazon-extension-v2",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "npx rimraf ./build && node esbuild.mjs"
+  },
+  "dependencies": {
+    "numeral": "^2.0.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.240",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "autoprefixer": "^10.4.14",
+    "esbuild": "^0.18.11",
+    "esbuild-plugin-copy": "^2.1.1",
+    "esbuild-postcss": "^0.0.4",
+    "postcss": "^8.4.25",
+    "tailwindcss": "^3.3.2"
+  }
+}
