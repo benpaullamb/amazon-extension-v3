@@ -1,4 +1,5 @@
 import { build } from 'esbuild';
+import { clean } from 'esbuild-plugin-clean';
 import { copy } from 'esbuild-plugin-copy';
 import postcss from 'esbuild-postcss';
 
@@ -10,6 +11,7 @@ await build({
   outdir: 'build',
   entryNames: '[name]',
   plugins: [
+    clean({ patterns: './build/*' }),
     postcss(),
     copy({
       assets: {

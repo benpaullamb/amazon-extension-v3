@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "build": "npx rimraf ./build && node esbuild.mjs"
+    "build": "node esbuild.mjs"
   },
   "dependencies": {
     "numeral": "^2.0.6",
@@ -16,6 +16,7 @@
     "@types/react-dom": "^18.2.6",
     "autoprefixer": "^10.4.14",
     "esbuild": "^0.18.11",
+    "esbuild-plugin-clean": "^1.0.1",
     "esbuild-plugin-copy": "^2.1.1",
     "esbuild-postcss": "^0.0.4",
     "postcss": "^8.4.25",
