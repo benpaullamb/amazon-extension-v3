@@ -1,23 +1,31 @@
 import { useEffect, useState } from 'react';
+import { Product } from 'types';
+import { getProductsFromTab } from 'utils';
+import ProductTile from './components/ProductTile';
 
 export default function App() {
-  const [products, setProducts] = useState([]);
-  const [displayProducts, setDisplayProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     const getProducts = async () => {
-      const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
-      const tabId = tabs[0].id;
-
-      chrome.tabs.sendMessage(tabId!, 'get_products', (res = []) => {
-        setProducts(res);
-        setDisplayProducts(res);
-
-        console.log(res);
-      });
+      const productsFromTab = await getProductsFromTab();
+      setProducts(productsFromTab);
     };
     getProducts();
   }, []);
 
-  return <h1 className="text-3xl font-bold underline text-red-500">Hello world!</h1>;
+  return (
+    <div className="p-4">
+      <div className="mb-4">
+        <span className="text-lg">
+          {products.length} product{products.length !== 1 ? 's' : ''}
+        </span>
+      </div>
+      <div className="grid grid-cols-3 gap-4">
+        {products.map((product) => (
+          <ProductTile product={product} />
+        ))}
+      </div>
+    </div>
+  );
 }
