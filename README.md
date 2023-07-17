@@ -8,10 +8,10 @@ New version of my [Amazon Extension](https://github.com/benpaullamb/amazon-exten
 - [x] Open all button
 - [x] Name to use regex
 - [x] Results analysis (common words/phrases in names, median price)
+- [ ] Sort by ratings default
 - [ ] List best seller links
 - [ ] Min ratings slider
 - [ ] Better name
-- [ ] Sort by ratings toggle button
 - [ ] Fix when items in basket
 - [ ] Store & more isolated components
 
