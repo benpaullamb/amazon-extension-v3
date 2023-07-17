@@ -4,9 +4,9 @@ New version of my [Amazon Extension](https://github.com/benpaullamb/amazon-exten
 
 ## Features
 
-- [x] Simpler search results (image, name, price, # ratings, smaller, more cols)
-- [ ] Open all button
-- [ ] Name to use regex
+- [x] Simpler search results (image, name, # ratings, price, smaller, more cols)
+- [x] Open all button
+- [x] Name to use regex
 - [ ] Results analysis (common words/phrases in names, median price)
 - [ ] List best seller links
 - [ ] Better name

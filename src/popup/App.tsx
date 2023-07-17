@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Product } from 'types';
-import ProductContext from './context';
+import { ProductContext, SearchContext } from './context';
 import { getProductsFromTab } from 'utils';
-import ProductTile from './components/ProductTile';
-import OpenAll from './components/OpenAll';
+import ControlPanel from './components/ControlPanel';
+import ProductList from './components/ProductList';
 
 export default function App() {
   const [products, setProducts] = useState<Product[]>([]);
+  const [search, setSearch] = useState<string>('');
+  const searchContext = { search, setSearch };
 
   useEffect(() => {
     (async () => {
@@ -17,19 +19,12 @@ export default function App() {
 
   return (
     <ProductContext.Provider value={products}>
-      <div className="p-4">
-        <div className="mb-4">
-          <OpenAll />
-          <span>
-            {products.length} product{products.length !== 1 ? 's' : ''}
-          </span>
+      <SearchContext.Provider value={searchContext}>
+        <div className="p-4">
+          <ControlPanel className="mb-4" />
+          <ProductList />
         </div>
-        <div className="grid grid-cols-5 gap-2">
-          {products.map((product) => (
-            <ProductTile product={product} />
-          ))}
-        </div>
-      </div>
+      </SearchContext.Provider>
     </ProductContext.Provider>
   );
 }

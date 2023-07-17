@@ -1,6 +1,11 @@
-import { createContext } from "react";
-import { Product } from "types";
+import { createContext } from 'react';
+import { Product } from 'types';
 
-const ProductContext = createContext<Product[]>([]);
+export const ProductContext = createContext<Product[]>([]);
 
-export default ProductContext;
+interface SearchContextValue {
+  search: string;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export const SearchContext = createContext<SearchContextValue>({ search: '', setSearch: () => {} });

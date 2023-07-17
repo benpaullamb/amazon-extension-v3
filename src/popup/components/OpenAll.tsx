@@ -1,6 +1,6 @@
 import { useContext } from 'react';
+import { ProductContext } from 'popup/context';
 import Button from './Button';
-import ProductContext from 'popup/context';
 import { openTabGroup } from 'utils';
 
 export default function OpenAll() {
