@@ -7,7 +7,7 @@ New version of my [Amazon Extension](https://github.com/benpaullamb/amazon-exten
 - [x] Simpler search results (image, name, # ratings, price, smaller, more cols)
 - [x] Open all button
 - [x] Name to use regex
-- [ ] Results analysis (common words/phrases in names, median price)
+- [x] Results analysis (common words/phrases in names, median price)
 - [ ] List best seller links
 - [ ] Min ratings slider
 - [ ] Better name
