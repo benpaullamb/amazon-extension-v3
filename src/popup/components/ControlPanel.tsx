@@ -13,8 +13,8 @@ export default function ControlPanel({ className = '' }: ControlPanelProps) {
       <div className="grid grid-cols-[1fr,auto] gap-4">
         <Search />
         <OpenAll />
-        <Analysis />
       </div>
+      <Analysis />
       <ProductCount />
     </div>
   );
