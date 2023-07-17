@@ -4,13 +4,15 @@ New version of my [Amazon Extension](https://github.com/benpaullamb/amazon-exten
 
 ## Features
 
-- [ ] Simpler search results (image, name, price, # ratings)
+- [x] Simpler search results (image, name, price, # ratings, smaller, more cols)
 - [ ] Open all button
-- [ ] Sort by ratings toggle button
 - [ ] Name to use regex
 - [ ] Results analysis (common words/phrases in names, median price)
+- [ ] List best seller links
 - [ ] Better name
+- [ ] Sort by ratings toggle button
 - [ ] Fix when items in basket
+- [ ] Store & more isolated components
 
 ## Tech
 
