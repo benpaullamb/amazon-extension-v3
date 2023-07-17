@@ -1,13 +1,13 @@
 import { useContext } from 'react';
-import { ProductContext } from 'popup/context';
+import { SearchedProductsContext } from 'popup/context';
 import Button from './Button';
 import { openTabGroup } from 'utils';
 
 export default function OpenAll() {
-  const products = useContext(ProductContext);
+  const { searchedProducts } = useContext(SearchedProductsContext);
 
   const openAll = () => {
-    const links = products.map(({ link }) => link);
+    const links = searchedProducts.map(({ link }) => link);
     openTabGroup(links.slice(0, 10));
   };
 

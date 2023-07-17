@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import { ProductContext } from 'popup/context';
+import { ProductsContext } from 'popup/context';
 
 export default function ProductCount() {
-  const products = useContext(ProductContext);
+  const products = useContext(ProductsContext);
 
   return (
     <span className="block">
