@@ -5,7 +5,7 @@ export default function ProductCount() {
   const { searchedProducts } = useContext(SearchedProductsContext);
 
   return (
-    <span className="block text-lg">
+    <span className="block text-base">
       {searchedProducts.length} product{searchedProducts.length !== 1 ? 's' : ''}
     </span>
   );

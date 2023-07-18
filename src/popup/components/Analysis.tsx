@@ -72,7 +72,7 @@ export default function Analysis() {
 
   return (
     <div>
-      <span className="block mb-4 text-lg">Median Price: £{numeral(medianPrice()).format('£0,0.00')}</span>
+      <span className="block mb-4 text-base">Median Price: £{numeral(medianPrice()).format('£0,0.00')}</span>
       <div className="flex flex-wrap gap-1">
         {popularWords().map((word) => (
           <Pill>{word}</Pill>
