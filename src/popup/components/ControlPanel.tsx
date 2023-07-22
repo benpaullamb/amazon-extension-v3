@@ -1,6 +1,5 @@
 import Search from './Search';
 import OpenAll from './OpenAll';
-import ProductCount from './ProductCount';
 import Analysis from './Analysis';
 
 interface ControlPanelProps {
@@ -9,13 +8,12 @@ interface ControlPanelProps {
 
 export default function ControlPanel({ className = '' }: ControlPanelProps) {
   return (
-    <div className={`flex flex-col gap-4 ${className}`}>
-      <div className="grid grid-cols-[1fr,auto] gap-4">
+    <div className={className}>
+      <div className="mb-4 grid grid-cols-[1fr,auto] gap-4">
         <Search />
         <OpenAll />
       </div>
       <Analysis />
-      <ProductCount />
     </div>
   );
 }

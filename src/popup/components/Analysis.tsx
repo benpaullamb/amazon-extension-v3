@@ -58,7 +58,7 @@ export default function Analysis() {
       if (a.count < b.count) return 1;
       return 0;
     });
-    
+
     const popularWords = wordsByCounts.filter(({ count }) => count > 1).map(({ word }) => word);
 
     const fullWords = popularWords
@@ -72,7 +72,10 @@ export default function Analysis() {
 
   return (
     <div>
-      <span className="block mb-4 text-base">Median Price: £{numeral(medianPrice()).format('£0,0.00')}</span>
+      <span className="mb-4 block text-base">
+        {searchedProducts.length} product{searchedProducts.length !== 1 ? 's' : ''} (median price: £
+        {numeral(medianPrice()).format('£0,0.00')})
+      </span>
       <div className="flex flex-wrap gap-1">
         {popularWords().map((word) => (
           <Pill>{word}</Pill>
